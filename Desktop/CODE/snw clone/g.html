@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text on Image</title>
+  <style>
+    .container {
+      position: relative; /* Creates a positioning context for child elements */
+      width: 500px;      /* Adjust to the size of your image */
+    }
+
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .text {
+      position: absolute; /* Overlaps the image */
+      top: 50%;           /* Positions text vertically */
+      left: 50%;          /* Positions text horizontally */
+      transform: translate(-50%, -50%); /* Centers the text */
+      color: white;       /* Text color */
+      font-size: 24px;    /* Adjust as needed */
+      font-weight: bold;  /* Bold text */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: Adds a shadow for readability */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://via.placeholder.com/500" alt="Sample Image" class="image">
+    <div class="text">Your Text Here</div>
+  </div>
+</body>
+</html>
