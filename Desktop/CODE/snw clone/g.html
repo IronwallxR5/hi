@@ -3,35 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Text on Image</title>
+  <title>z-index Example</title>
   <style>
-    .container {
-      position: relative; /* Creates a positioning context for child elements */
-      width: 500px;      /* Adjust to the size of your image */
+    .box1 {
+      position: absolute;
+      top: 80px;
+      left: 80px;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      z-index: 1;
     }
 
-    .image {
-      display: block;
-      width: 100%;
-      height: auto;
+    .box2 {
+      position: absolute;
+      top: 80px;
+      left: 50px;
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      z-index: 2;
     }
 
-    .text {
-      position: absolute; /* Overlaps the image */
-      top: 50%;           /* Positions text vertically */
-      left: 50%;          /* Positions text horizontally */
-      transform: translate(-50%, -50%); /* Centers the text */
-      color: white;       /* Text color */
-      font-size: 24px;    /* Adjust as needed */
-      font-weight: bold;  /* Bold text */
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: Adds a shadow for readability */
+    .box3 {
+      position: absolute;
+      top: 110px;
+      left: 110px;
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      z-index: 0;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://via.placeholder.com/500" alt="Sample Image" class="image">
-    <div class="text">Your Text Here</div>
-  </div>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
 </body>
 </html>
